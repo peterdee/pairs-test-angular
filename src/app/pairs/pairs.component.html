@@ -1,0 +1,21 @@
+<div class="content">
+  <form (onSubmit)="calculate()">
+
+    <div class="margin">
+      <input [(ngModel)]="valuesString" name="valuesString" placeholder="Values"/>
+    </div>
+
+    <div class="button-container">
+      <button
+        type="submit"
+        (click)="calculate()"
+        [disabled]="valuesString === null">
+        CALCULATE
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf="results" class="result">
+    <h2>Result: {{results}}</h2>
+  </div>
+</div>

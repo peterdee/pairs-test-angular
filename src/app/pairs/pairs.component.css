@@ -1,0 +1,12 @@
+.content {
+  width: 500px;
+  margin: 0 auto;
+}
+.button-container, .result {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.result {
+  font-size: 20px;
+}
