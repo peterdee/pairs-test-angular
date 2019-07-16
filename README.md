@@ -51,3 +51,25 @@ Use the `--prod` flag for a production build.
 `ng test`
  
 Tests are executed via [Karma](https://karma-runner.github.io).
+
+### How to use
+
+- Enter the values in the `Values` input field. 
+
+Values should be separated with the comma symbol (`,`).
+
+Values should be integers or symbols.
+
+The app will check all of the values, and only the numbers will be used for the pair multiplication.
+
+- Press the `CALCULATE` button or hit `ENTER` after you entered all of the values.
+
+- Resulting value will be displayed under the `CALCULATE` button.
+
+### Brief algorithm walk through
+
+- Entered values are split into an array.
+- All of the values in the array are checked, and only the numbers are left in the resulting array.
+- Resulting array of numbers is split into two separate arrays of integers: one for the positive values, and one for the negative values (negative array includes zeroes).
+- Both positive and negative arrays are then processed, pairs are getting determined recursively. Two new arrays are formed: one with the multiplications of the positive values, and another one with the multiplications of the negative values.
+- Total sum is calculated.
