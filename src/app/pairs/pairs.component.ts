@@ -26,8 +26,8 @@ export class PairsComponent {
     const { positive = [], negative = [] }: { positive: number[], negative: number[] } = this.service.splitter(processed);
 
     // get pairs for both of the arrays
-    const positivePairs = this.service.getPairs(positive);
-    const negativePairs = this.service.getPairs(negative);
+    const positivePairs: number[] = this.service.getPairs(positive);
+    const negativePairs: number[] = this.service.getPairs(negative);
 
     // calculate final result
     this.result = [].concat(positivePairs, negativePairs).reduce((sum, item) => {

@@ -9,10 +9,9 @@
     <div class="button-container margin-bottom">
       <button
         type="submit"
+        class="button"
         (click)="calculate()"
-        [disabled]="valuesString === null">
-        CALCULATE
-      </button>
+        [disabled]="valuesString === null">CALCULATE</button>
     </div>
   </form>
   <div *ngIf="result" class="result">
