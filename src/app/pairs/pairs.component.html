@@ -1,11 +1,12 @@
+<div class="app-title margin-bottom">
+  <b>Pairs Test (Angular)</b>
+</div>
 <div class="content">
   <form (onSubmit)="calculate()">
-
-    <div class="margin">
+    <div class="margin-bottom">
       <input [(ngModel)]="valuesString" name="valuesString" placeholder="Values"/>
     </div>
-
-    <div class="button-container">
+    <div class="button-container margin-bottom">
       <button
         type="submit"
         (click)="calculate()"
@@ -14,8 +15,7 @@
       </button>
     </div>
   </form>
-
-  <div *ngIf="results" class="result">
-    <h2>Result: {{results}}</h2>
+  <div *ngIf="result" class="result">
+    <b>Result: {{result}}</b>
   </div>
 </div>

@@ -1,5 +1,12 @@
+.app-title {
+  margin-top: 50px;
+  text-align: center;
+}
+.app-title, .result {
+  font-size: 20px;
+}
 .content {
-  width: 500px;
+  max-width: 480px;
   margin: 0 auto;
 }
 .button-container, .result {
@@ -7,6 +14,6 @@
   justify-content: center;
   margin-top: 20px;
 }
-.result {
-  font-size: 20px;
+.margin-bottom {
+  margin-bottom: 15px;
 }

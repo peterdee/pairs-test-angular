@@ -1,24 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import compare from '../../utils';
+import { CalculateService } from '../services/CalculateService';
 
 @Component({
   selector: 'app-pairs',
   templateUrl: './pairs.component.html',
   styleUrls: ['./pairs.component.css']
 })
-export class PairsComponent implements OnInit {
+
+export class PairsComponent {
 
   valuesString: string = null;
-  results: number = null;
+  result: number = null;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(private service: CalculateService) {}
 
   calculate() {
-    this.results = compare(this.valuesString.split(','));
-    this.valuesString = null;
+    // create an array of strings
+    const stringsArray: any[] = this.valuesString.split(',');
+
+    // convert everything to numbers
+    const processed: number[] = this.service.convertToNumbers(stringsArray);
+
+    // get arrays with positive and negative values
+    const { positive = [], negative = [] }: { positive: number[], negative: number[] } = this.service.splitter(processed);
+
+    // get pairs for both of the arrays
+    const positivePairs = this.service.getPairs(positive);
+    const negativePairs = this.service.getPairs(negative);
+
+    // calculate final result
+    this.result = [].concat(positivePairs, negativePairs).reduce((sum, item) => {
+      sum += item;
+      return sum;
+    });
   }
 }
