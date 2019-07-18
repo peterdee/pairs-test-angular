@@ -34,7 +34,7 @@ You choose how input/output is handled etc.
 
 ### Launch
 
-`ng serve`
+`npm start`
 
 Development server will be available at http://localhost:4200
 
