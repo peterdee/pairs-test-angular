@@ -40,7 +40,7 @@ Development server will be available at http://localhost:4200
 
 ### Build
 
-`ng build`
+`npm run build`
 
 The build artifacts will be stored in the `dist/` directory.
 
@@ -48,7 +48,7 @@ Use the `--prod` flag for a production build.
 
 ### Testing
 
-`ng test`
+`npm run test`
  
 Tests are executed via [Karma](https://karma-runner.github.io).
 
