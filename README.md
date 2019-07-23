@@ -36,11 +36,23 @@ You choose how input/output is handled etc.
 
 `npm start`
 
+Since the app uses `80` port, you can receive this error:
+
+```text
+An unhandled exception occurred: listen EACCES: permission denied 127.0.0.1:80
+```
+
+You can still launch the app with `sudo`:
+
+`sudo npm start`
+
 Development server will be available at http://localhost:80
 
 ### Build
 
 `npm run build`
+
+Use `sudo` if you are getting the `EACCESS` errors.
 
 The build artifacts will be stored in the `dist/` directory.
 
@@ -49,6 +61,8 @@ Use the `--prod` flag for a production build.
 ### Testing
 
 `npm run test`
+
+Use `sudo` if you are getting the `EACCESS` errors.
  
 Tests are executed via [Karma](https://karma-runner.github.io).
 
