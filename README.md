@@ -36,7 +36,7 @@ You choose how input/output is handled etc.
 
 `npm start`
 
-Development server will be available at http://localhost:4200
+Development server will be available at http://localhost:80
 
 ### Build
 
