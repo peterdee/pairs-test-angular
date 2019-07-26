@@ -8,11 +8,13 @@
   "description": "Pairs Test Task (Angular)",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 80",
+    "start": "node server.js",
+    "dev": "ng serve --port 80",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "repository": {
@@ -32,6 +34,8 @@
     "@angular/platform-browser": "~8.1.1",
     "@angular/platform-browser-dynamic": "~8.1.1",
     "@angular/router": "~8.1.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

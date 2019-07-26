@@ -34,7 +34,7 @@ You choose how input/output is handled etc.
 
 ### Launch
 
-`npm start`
+`npm run dev`
 
 Since the app uses `80` port, you can receive this error:
 
@@ -44,7 +44,7 @@ An unhandled exception occurred: listen EACCES: permission denied 127.0.0.1:80
 
 You can still launch the app with `sudo`:
 
-`sudo npm start`
+`sudo npm run dev`
 
 Development server will be available at http://localhost:80
 
@@ -57,6 +57,20 @@ Use `sudo` if you are getting the `EACCESS` errors.
 The build artifacts will be stored in the `dist/` directory.
 
 Use the `--prod` flag for a production build.
+
+### Static serving
+
+`npm start`
+
+Static files are served from the `/dist` directory with `Express`.
+
+To serve the static, run the `build` command first.
+
+### Heroku deployment
+
+The app deployed to Heroku automatically (`deploy` branch).
+
+Available at https://pairs-test.herokuapp.com
 
 ### Testing
 
@@ -83,7 +97,11 @@ The app will check all of the values, and only the numbers will be used for the 
 ### Brief algorithm walk through
 
 - Entered values are split into an array.
+
 - All of the values in the array are checked, and only the numbers are left in the resulting array.
+
 - Resulting array of numbers is split into two separate arrays of integers: one for the positive values, and one for the negative values (negative array includes zeroes).
+
 - Both positive and negative arrays are then processed, pairs are getting determined recursively. Two new arrays are formed: one with the multiplications of the positive values, and another one with the multiplications of the negative values.
+
 - Total sum is calculated.
